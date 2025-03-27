@@ -8,10 +8,11 @@ import { CommonModule } from '@angular/common';
 import { LogoComponent } from '../logo/logo.component';
 import { Button } from 'primeng/button';
 import { ButtonGroup } from 'primeng/buttongroup';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [Menubar, BadgeModule, AvatarModule, InputTextModule, CommonModule, LogoComponent, Button, ButtonGroup],
+  imports: [Menubar, BadgeModule, AvatarModule, InputTextModule, CommonModule, LogoComponent, Button, ButtonGroup, RouterLink],
   templateUrl: './navbar.component.html',
 })
 export class NavbarComponent {
@@ -23,18 +24,22 @@ export class NavbarComponent {
       {
         label: 'Home',
         icon: 'pi pi-home',
+        link: '/',
       },
       {
         label: 'Latest Listings',
         icon: 'pi pi-th-large',
+        link: '/listings'
       },
       {
         label: 'About us',
         icon: 'pi pi-question-circle',
+        link: '/about-us',
       },
       {
         label: 'Contact us',
         icon: 'pi pi-envelope',
+        link: '/contact-us',
       },
     ];
   }

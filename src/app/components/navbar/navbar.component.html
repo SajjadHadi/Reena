@@ -1,11 +1,11 @@
-<div class="card">
+<div class="card sticky top-0 left-0 right-0 z-100">
   <p-menubar [model]="items">
     <ng-template #start>
       <app-logo></app-logo>
     </ng-template>
 
     <ng-template #item let-item let-root="root">
-      <a class="flex items-center p-menubar-item-link">
+      <a [routerLink]="item.link" class="flex items-center p-menubar-item-link">
         <span [class]="item.icon"></span>
         <span>{{ item.label }}</span>
       </a>

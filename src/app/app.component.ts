@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { ButtonComponent } from './components/button/button.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [ButtonComponent],
+  imports: [
+    NavbarComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

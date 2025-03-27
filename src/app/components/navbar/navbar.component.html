@@ -1,0 +1,29 @@
+<div class="card">
+  <p-menubar [model]="items">
+    <ng-template #start>
+      <app-logo></app-logo>
+    </ng-template>
+
+    <ng-template #item let-item let-root="root">
+      <a class="flex items-center p-menubar-item-link">
+        <span [class]="item.icon"></span>
+        <span>{{ item.label }}</span>
+      </a>
+    </ng-template>
+
+    <ng-template #end>
+      <div class="flex items-center gap-2">
+        @if (isLoggedIn) {
+          <!--          PLACE HOLDER AVATAR           -->
+          <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle"/>
+        } @else {
+          <p-button-group>
+            <p-button label="Login" icon="pi pi-sign-in"/>
+            <p-button label="Sign Up" icon="pi pi-user-plus" severity="secondary"/>
+          </p-button-group>
+        }
+      </div>
+
+    </ng-template>
+  </p-menubar>
+</div>

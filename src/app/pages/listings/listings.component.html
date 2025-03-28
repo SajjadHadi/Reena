@@ -1,1 +1,11 @@
-<p>listings works!</p>
+<div class="mt-8 mb-12 mx-20">
+  <h2 class="text-slate-400 text-3xl font-bold text-center mb-8">Latest Listings</h2>
+  <div class="grid grid-cols-4 gap-4">
+    @for (home of homes; track home.title) {
+      <app-card [item]="home"></app-card>
+    }
+  </div>
+</div>
+
+
+<app-footer></app-footer>

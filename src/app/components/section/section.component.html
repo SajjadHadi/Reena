@@ -7,15 +7,16 @@
       <p class="mb-4 text-700 line-height-3">{{ sectionInputs.description }}</p>
 
       @if (sectionInputs.btnLabel) {
-        <p-button [label]="sectionInputs.btnLabel" class="mr-3 p-button-raised"></p-button>
+        <p-button [label]="sectionInputs.btnLabel" class="mr-3"
+                  [severity]="getBtnSeverity(sectionInputs.btnSeverity)"></p-button>
       }
     </section>
   </div>
   <div class="flex-4 p-6">
     <div class="relative w-full mx-auto">
       <div
-        class="absolute inset-0 bg-primary-50 rounded-3xl"></div>
-      <div class="relative bg-white rounded-2xl overflow-hidden scale-80">
+        [class]="'absolute inset-0 rounded-3xl bg-primary-50 ' + sectionInputs?.boxClass"></div>
+      <div class="relative rounded-2xl overflow-hidden scale-80">
         <p-image
           [src]="sectionInputs.image"
           [alt]="sectionInputs.imageAlt"

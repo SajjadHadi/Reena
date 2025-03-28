@@ -1,3 +1,7 @@
+import { Button } from 'primeng/button';
+
+type ButtonSeverity = Button['severity'];
+
 export interface SectionInputs {
   title: string;
   image: string;
@@ -6,4 +10,6 @@ export interface SectionInputs {
   class?: string;
   btnLabel?: string;
   imageAlt?: string;
+  boxClass?: string;
+  btnSeverity?: ButtonSeverity;
 }

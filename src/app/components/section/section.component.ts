@@ -3,7 +3,7 @@ import { Button } from 'primeng/button';
 import { Image } from 'primeng/image';
 import { SectionInputs } from '../../interfaces/inputs';
 
-
+type ButtonSeverity = Button['severity'];
 
 @Component({
   selector: 'app-section',
@@ -15,4 +15,8 @@ import { SectionInputs } from '../../interfaces/inputs';
 })
 export class SectionComponent {
   @Input() sectionInputs!: SectionInputs;
+
+  getBtnSeverity(severity: ButtonSeverity) {
+    return severity || 'primary';
+  }
 }

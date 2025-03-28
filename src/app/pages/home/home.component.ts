@@ -30,9 +30,11 @@ export class HomeComponent {
   }
 
   agentConfig: SectionInputs = {
-    class: "bg-primary-500",
-    title: "Looking for best agents?",
-    description: "With Reena, you can find best real estate agents in the universe!",
+    class: "bg-primary-500 px-20 py-10",
+    boxClass: "bg-transparent",
+    btnSeverity: "secondary",
+    title: "Looking for the best agents?",
+    description: "Discover the finest real estate agents in the universe, only with Reena!",
     btnLabel: "Contact us",
     image: "./assets/images/pexels-kindelmedia-7578901.jpg",
     imageAlt: "Agent image"

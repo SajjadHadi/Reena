@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 
@@ -10,4 +10,5 @@ import { RouterLink } from '@angular/router';
   templateUrl: './logo.component.html',
 })
 export class LogoComponent {
+  @Input() class?: string;
 }

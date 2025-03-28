@@ -1,1 +1,40 @@
-<p>footer works!</p>
+<div class="flex flex-col md:flex-row md:items-center md:content-center px-6 md:px-20 py-10 gap-8">
+  <div class="md:flex-1">
+    <app-logo class="scale-150 origin-left"></app-logo>
+  </div>
+
+  <div class="md:flex-3 grid grid-cols-1 sm:grid-cols-3 gap-8 w-full">
+    <div>
+      <h3 class="text-lg font-semibold mb-4">About Us</h3>
+      <ul class="space-y-2">
+        <li *ngFor="let item of items[0]">
+          <a routerLink="/" class="text-slate-600 hover:text-slate-900 transition-colors">{{ item }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Resources</h3>
+      <ul class="space-y-2">
+        <li *ngFor="let item of items[1]">
+          <a routerLink="/" class="text-slate-600 hover:text-slate-900 transition-colors">{{ item }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Community</h3>
+      <ul class="space-y-2">
+        <li *ngFor="let item of items[2]">
+          <a routerLink="/" class="text-slate-600 hover:text-slate-900 transition-colors">{{ item }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr class="divider text-slate-100">
+
+<div class="text-center text-slate-400 py-4">
+  © 2025 Reena Corporation | Crafted with care by Sajjad Hadi
+</div>

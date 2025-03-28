@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { FormComponent } from '../../components/form/form.component';
+import { SignUp } from '../../interfaces/forms';
 
 @Component({
   selector: 'app-sign-up',
@@ -45,7 +46,7 @@ export class SignUpComponent {
     submitLabel: 'Sign up'
   }
 
-  onSignUp(data: any) {
+  onSignUp(data: SignUp) {
     console.log(data);
   }
 }

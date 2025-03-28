@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormComponent } from '../../components/form/form.component';
 import { Validators } from '@angular/forms';
+import { Login } from '../../interfaces/forms';
 
 @Component({
   selector: 'app-login',
@@ -35,7 +36,7 @@ export class LoginComponent {
     submitLabel: 'Login'
   }
 
-  onLogin(data: { email: string, password: string }) {
+  onLogin(data: Login) {
     console.log(data);
   }
 }

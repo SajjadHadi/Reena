@@ -3,13 +3,13 @@ import { Validators } from '@angular/forms';
 import { FormComponent } from '../../components/form/form.component';
 
 @Component({
-  selector: 'app-sign-in',
+  selector: 'app-sign-up',
   imports: [
     FormComponent
   ],
-  templateUrl: './sign-in.component.html'
+  templateUrl: './sign-up.component.html'
 })
-export class SignInComponent {
+export class SignUpComponent {
   signUpConfig = {
     title: 'Sign up',
     description: "Enter your credentials to create a new account. If you've already created and account please go to the login page.",

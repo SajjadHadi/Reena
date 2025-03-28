@@ -28,7 +28,7 @@ export default [
     bathrooms: 2,
     squareMeters: 150,
     features: ["Rooftop Pool", "Gym", "24/7 Security"],
-    coverImage: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    coverImage: "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: ["luxury-apartment1.jpg", "luxury-apartment2.jpg"],
     location:
       {
@@ -48,7 +48,7 @@ export default [
     bathrooms: 1,
     squareMeters: 80,
     features: ["Fireplace", "Garden", "Rustic Design"],
-    coverImage: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    coverImage: "https://images.pexels.com/photos/453201/pexels-photo-453201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: ["cozy-cottage1.jpg", "cozy-cottage2.jpg"],
     location:
       {
@@ -68,7 +68,7 @@ export default [
     bathrooms: 4,
     squareMeters: 350,
     features: ["Private Beach", "Infinity Pool", "Terrace"],
-    coverImage: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    coverImage: "https://images.pexels.com/photos/259685/pexels-photo-259685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: ["beachfront-villa1.jpg", "beachfront-villa2.jpg"],
     location:
       {
@@ -88,7 +88,7 @@ export default [
     bathrooms: 1,
     squareMeters: 35,
     features: ["High-Speed Internet", "City View"],
-    coverImage: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    coverImage: "https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: ["urban-studio1.jpg", "urban-studio2.jpg"],
     location:
       {
@@ -108,7 +108,7 @@ export default [
     bathrooms: 2,
     squareMeters: 120,
     features: ["Hiking Trails", "Wood Stove", "Deck"],
-    coverImage: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    coverImage: "https://images.pexels.com/photos/276593/pexels-photo-276593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: ["mountain-cabin1.jpg", "mountain-cabin2.jpg"],
     location:
       {
@@ -128,7 +128,7 @@ export default [
     bathrooms: 3,
     squareMeters: 180,
     features: ["Original Woodwork", "Balcony", "Walkable Neighborhood"],
-    coverImage: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    coverImage: "https://images.pexels.com/photos/2183521/pexels-photo-2183521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: ["historic-townhouse1.jpg", "historic-townhouse2.jpg"],
     location:
       {

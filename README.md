@@ -1,3 +1,10 @@
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![NgRX](https://img.shields.io/badge/NgRX-512BD4?style=for-the-badge&logo=ngrx&logoColor=white)
+![Appwrite](https://img.shields.io/badge/Appwrite-F02E65?style=for-the-badge&logo=Appwrite&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![PrimeNG](https://img.shields.io/badge/Prime_NG-D51007?style=for-the-badge&logo=primeng&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
 # Reena
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.

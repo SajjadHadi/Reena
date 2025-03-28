@@ -1,19 +1,9 @@
-<app-section
-  class="px-20 py-10"
-  title="Find the home" subTitle="that you've ever wanted"
-  description="With Reena, you can explore trillions of homes, whether they’re nestled on Earth or scattered across other planets!"
-  btnLabel="Explore latest listings"
-  image="./assets/images/pexels-frans-van-heerden-201846-1438834.jpg" imageAlt="Hero image of some homes"></app-section>
+<app-section [sectionInputs]="homeConfig"></app-section>
 
 
 <h2 class="text-4xl font-bold text-center text-primary-400 mb-4">Latest Listings</h2>
 <app-carousel [items]="homes"></app-carousel>
 
-<app-section
-  class="bg-primary-500"
-  title="Looking for best agents?"
-  description="With Reena, you can find best real estate agents in the universe!"
-  btnLabel="Contact us"
-  image="./assets/images/pexels-kindelmedia-7578901.jpg" imageAlt="Agent image"></app-section>
+<app-section [sectionInputs]="agentConfig"></app-section>
 
 <app-footer/>

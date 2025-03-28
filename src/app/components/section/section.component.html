@@ -1,13 +1,13 @@
 <div class="flex lg:flex-row flex-col items-center content-center surface-section text-800"
-     [class]="class()">
+     [class]="sectionInputs.class">
   <div class="flex-2/5 p-6 text-center md:text-left flex align-items-center ">
     <section>
-      <span class="block text-6xl font-bold mb-1">{{ title() }}</span>
-      <div class="text-6xl text-primary font-bold my-3">{{ subTitle() }}</div>
-      <p class="mb-4 text-700 line-height-3">{{ description() }}</p>
+      <span class="block text-6xl font-bold mb-1">{{ sectionInputs.title }}</span>
+      <div class="text-6xl text-primary font-bold my-3">{{ sectionInputs.subTitle }}</div>
+      <p class="mb-4 text-700 line-height-3">{{ sectionInputs.description }}</p>
 
-      @if (btnLabel()) {
-        <p-button [label]="btnLabel()" class="mr-3 p-button-raised"></p-button>
+      @if (sectionInputs.btnLabel) {
+        <p-button [label]="sectionInputs.btnLabel" class="mr-3 p-button-raised"></p-button>
       }
     </section>
   </div>
@@ -17,8 +17,8 @@
         class="absolute inset-0 bg-primary-50 rounded-3xl"></div>
       <div class="relative bg-white rounded-2xl overflow-hidden scale-80">
         <p-image
-          [src]="image()"
-          [alt]="imageAlt()"
+          [src]="sectionInputs.image"
+          [alt]="sectionInputs.imageAlt"
           imageClass="w-full h-auto object-cover object-center rounded-2xl"
         />
       </div>

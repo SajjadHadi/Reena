@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Button } from 'primeng/button';
 import { Tag } from 'primeng/tag';
 import { Home } from '../../interfaces/home';
@@ -14,5 +14,5 @@ import { Image } from 'primeng/image';
   templateUrl: './card.component.html',
 })
 export class CardComponent {
-  item = input<Home>();
+  @Input() item! : Home;
 }

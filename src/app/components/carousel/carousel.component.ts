@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Carousel } from 'primeng/carousel';
 import { TagModule } from 'primeng/tag';
 import { CardComponent } from '../card/card.component';
@@ -15,9 +15,7 @@ import { Home } from '../../interfaces/home';
   templateUrl: './carousel.component.html',
 })
 export class CarouselComponent {
-
-  items= input<Home[]>([]);
-
+  @Input() items!: Home[];
 
   responsiveOptions = [
     {

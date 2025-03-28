@@ -1,6 +1,9 @@
-import { Component, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Button } from 'primeng/button';
 import { Image } from 'primeng/image';
+import { SectionInputs } from '../../interfaces/inputs';
+
+
 
 @Component({
   selector: 'app-section',
@@ -11,11 +14,5 @@ import { Image } from 'primeng/image';
   templateUrl: './section.component.html',
 })
 export class SectionComponent {
-  title = input<string>();
-  subTitle = input<string>();
-  description = input<string>();
-  image = input<string>();
-  class = input<string | undefined>();
-  btnLabel = input<string | undefined>();
-  imageAlt = input<string | undefined>();
+  @Input() sectionInputs!: SectionInputs;
 }

@@ -1,0 +1,63 @@
+<p-card [styleClass]="class">
+  <ng-template #title>
+  <div class="text-center mb-4">
+    <h2 class="text-xl font-bold">{{ config.title }}</h2>
+    <p class="text-sm text-slate-400">{{ config.description }}</p>
+  </div>
+  </ng-template>
+  <ng-template #content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
+      @for (field of config.fields; track field.name) {
+        @if (field.type == "select") {
+          <p-select [options]="field.options"
+                    [formControlName]="field.name"
+                    optionLabel="key"
+                    [placeholder]="field.placeholder"
+                    class="w-full"/>
+        } @else if (field.type == "checkbox") {
+          <div class="flex items-center">
+            <p-checkbox [formControlName]="field.name" binary [inputId]="field.name"/>
+            <label [for]="field.name" class="ml-2 pt-1">{{ field.label }}</label>
+          </div>
+        } @else if (field.type == "textarea") {
+          <p-iftalabel>
+        <textarea pTextarea
+                  [id]="field.name"
+                  [formControlName]="field.name"
+                  style="resize: none"
+                  class="w-full">
+        </textarea>
+            <label [for]="field.name">{{ field.label }}</label>
+          </p-iftalabel>
+        } @else if (field.icon) {
+          <p-iftalabel>
+            <p-iconfield>
+              <p-inputicon [class]="'pi ' + field.icon"/>
+              <input pInputText
+                     [type]="field.type"
+                     [id]="field.name"
+                     [formControlName]="field.name"
+                     class="w-full"
+                     autocomplete="off"/>
+            </p-iconfield>
+            <label [for]="field.name" class="text-slate-700">{{ field.label }}</label>
+          </p-iftalabel>
+        } @else {
+          <p-iftalabel>
+            <input pInputText
+                   [type]="field.type"
+                   [id]="field.name"
+                   [formControlName]="field.name"
+                   class="w-full"
+                   autocomplete="off"/>
+            <label [for]="field.name" class="text-slate-700">{{ field.label }}</label>
+          </p-iftalabel>
+        }
+        @if (form.get(field.name)?.invalid && form.get(field.name)?.touched) {
+          <span class="text-red-500 text-sm">{{ getErrorMessage(field.name) }}</span>
+        }
+      }
+      <p-button [label]="config.submitLabel" type="submit"></p-button>
+    </form>
+  </ng-template>
+</p-card>

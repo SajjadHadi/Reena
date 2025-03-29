@@ -30,6 +30,8 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 ![Reena Cover](public/assets/images/ReenaListingsPage.png)
 ![Reena Cover](public/assets/images/ReenaContactUsPage.png)
 ![Reena Cover](public/assets/images/ReenaLoginPage.png)
+![Reena Cover](public/assets/images/ReenaAddAListingPage.png)
+
 
 ## Development server
 

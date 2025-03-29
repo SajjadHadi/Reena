@@ -5,7 +5,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { Home } from '../../interfaces/home';
 
 import mockData from '../../mock-data';
-import { SectionInputs } from '../../interfaces/inputs';
+import { SectionInputs } from '../../interfaces/input';
 
 @Component({
   selector: 'app-home',

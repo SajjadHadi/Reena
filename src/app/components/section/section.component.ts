@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Button } from 'primeng/button';
 import { Image } from 'primeng/image';
-import { SectionInputs } from '../../interfaces/inputs';
+import { SectionInputs } from '../../interfaces/input';
 
 type ButtonSeverity = Button['severity'];
 

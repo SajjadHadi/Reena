@@ -5,9 +5,13 @@ import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
 import { ReenaPreset } from '../theme';
+import { provideStore } from '@ngrx/store';
+import { provideEffects } from '@ngrx/effects';
+import { effects, reducers } from './store';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideAnimationsAsync(),
+  providers: [
+    provideAnimationsAsync(),
     providePrimeNG({
       theme: {
         preset: ReenaPreset,
@@ -15,6 +19,10 @@ export const appConfig: ApplicationConfig = {
           darkModeSelector: 'none'
         }
       }
-    }), provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes)]
+    }),
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes),
+    provideStore(reducers),
+    provideEffects(effects)
+  ]
 };

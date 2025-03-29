@@ -1,6 +1,6 @@
-import { Location } from './location';
-
 export interface Home {
+  $id: string;
+  userId: string;
   title: string;
   description: string;
   price: number;
@@ -8,8 +8,10 @@ export interface Home {
   bedrooms: number;
   bathrooms: number;
   squareMeters: number;
-  features: string[];
+  features?: string[];
   coverImage: string;
-  images: string[];
-  location: Location;
+  image?: string[];
+  city: string;
+  country: string;
+  zipcode?: string;
 }

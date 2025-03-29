@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { FormComponent } from '../../components/form/form.component';
-import { SignUp } from '../../interfaces/forms';
+import { SignUp } from '../../interfaces/form';
 
 @Component({
   selector: 'app-sign-up',

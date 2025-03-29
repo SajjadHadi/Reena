@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Account, Databases, ID, Models } from 'appwrite';
-import { account, databases } from '../../lib/appwrite';
+import { Account, ID, Models } from 'appwrite';
+import { account } from '../../lib/appwrite';
 import { Login, SignUp } from '../interfaces/form';
 
 @Injectable({
@@ -8,11 +8,9 @@ import { Login, SignUp } from '../interfaces/form';
 })
 export class UserService {
   private account: Account;
-  private databases: Databases;
 
   constructor() {
     this.account = account;
-    this.databases = databases;
   }
 
   async getUser(): Promise<Models.User<Models.Preferences>> {

@@ -92,13 +92,6 @@ export class UserAddListingComponent {
   }
 
   async addListing(data: Home) {
-    try {
-      const listing = await this.listingService.createListing(data);
-      if (listing) {
-        await this.router.navigate([`/listings/${listing.$id}`]);
-      }
-    } catch (error) {
-      throw new Error(error instanceof Error ? error.message : String(error));
-    }
+    await this.listingService.createListing(data);
   }
 }

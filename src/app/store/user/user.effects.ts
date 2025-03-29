@@ -72,7 +72,7 @@ export class UserEffects {
     () =>
       this.actions$.pipe(
         ofType(UserActions.signUpSuccess),
-        tap(() => this.router.navigate(['/user-dashboard']))
+        tap(() => this.router.navigate(['/']))
       ),
     { dispatch: false }
   );
@@ -82,7 +82,7 @@ export class UserEffects {
     () =>
       this.actions$.pipe(
         ofType(UserActions.createSessionSuccess),
-        tap(() => this.router.navigate(['/user-dashboard']))
+        tap(() => this.router.navigate(['/']))
       ),
     { dispatch: false }
   );

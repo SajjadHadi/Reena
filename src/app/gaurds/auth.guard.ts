@@ -12,7 +12,7 @@ export const authGuard: CanActivateFn = (route: ActivatedRouteSnapshot, state: R
 
   // Determine the mode from route data (default to 'authenticated')
   const mode = route.data?.['authMode'] || 'authenticated';
-  const redirectTo = mode === 'authenticated' ? '/login' : '/user-dashboard';
+  const redirectTo = mode === 'authenticated' ? '/login' : '/';
 
   return combineLatest([
     store.select(selectUser),

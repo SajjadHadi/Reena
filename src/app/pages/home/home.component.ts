@@ -1,11 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SectionComponent } from '../../components/section/section.component';
 import { CarouselComponent } from '../../components/carousel/carousel.component';
 import { FooterComponent } from '../../components/footer/footer.component';
-import { Home } from '../../interfaces/home';
-
-import mockData from '../../mock-data';
 import { SectionInputs } from '../../interfaces/input';
+import { ListingService } from '../../services/listing.service';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +15,13 @@ import { SectionInputs } from '../../interfaces/input';
   templateUrl: './home.component.html',
 })
 export class HomeComponent {
-  homes: Home[] = mockData as Home[];
+  homeService = inject(ListingService);
+  // TODO: Handle correct type for homes
+  homes: any[] = [];
+
+  async ngOnInit() {
+    this.homes = await this.homeService.getAllListings();
+  }
 
   homeConfig: SectionInputs = {
     class: "px-20 py-10",

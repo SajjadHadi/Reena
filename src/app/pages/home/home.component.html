@@ -1,8 +1,9 @@
 <app-section [sectionInputs]="homeConfig"></app-section>
 
-
-<h2 class="text-4xl font-bold text-center text-primary-400 mb-4">Latest Listings</h2>
-<app-carousel [items]="homes"></app-carousel>
+@if (homes.length > 0) {
+  <h2 class="text-4xl font-bold text-center text-primary-400 mb-4">Latest Listings</h2>
+  <app-carousel [items]="homes"></app-carousel>
+}
 
 <app-section [sectionInputs]="agentConfig"></app-section>
 

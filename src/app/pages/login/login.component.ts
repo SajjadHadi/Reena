@@ -16,7 +16,6 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   router = inject(Router);
   store = inject(Store);
-  protected readonly Validators = Validators;
 
   loginConfig = {
     title: 'Login',
@@ -42,6 +41,5 @@ export class LoginComponent {
 
   onLogin(data: Login) {
     this.store.dispatch(UserActions.createSession({ data }));
-    this.router.navigate(['/user-dashboard']);
   }
 }

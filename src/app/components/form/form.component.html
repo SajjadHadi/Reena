@@ -11,7 +11,8 @@
         @if (field.type == "select") {
           <p-select [options]="field.options"
                     [formControlName]="field.name"
-                    optionLabel="key"
+                    optionLabel="label"
+                    optionValue="value"
                     [placeholder]="field.placeholder"
                     class="w-full"/>
         } @else if (field.type == "checkbox") {

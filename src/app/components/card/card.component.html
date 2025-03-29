@@ -12,7 +12,13 @@
   <small>{{ item.city }}, {{ item.country }}</small>
   <div class="flex justify-between items-center mt-4">
     <div class="mt-0 font-semibold text-xl">{{ '$' + item.price }}</div>
-    <p-button [outlined]="true" icon="pi pi-arrow-right" iconPos="right" label="Know more" severity="secondary"
-              size="small"/>
+    <p-button
+      [routerLink]="'/listings/' + item.$id"
+      [outlined]="true"
+      icon="pi pi-arrow-right"
+      iconPos="right"
+      label="Know more"
+      severity="secondary"
+      size="small"/>
   </div>
 </div>

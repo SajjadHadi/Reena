@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
-import { Home } from '../../interfaces/home';
-import mockData from '../../mock-data';
+import { Component, inject } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { ListingService } from '../../services/listing.service';
 
 @Component({
   selector: 'app-listings',
@@ -13,6 +12,11 @@ import { FooterComponent } from '../../components/footer/footer.component';
   templateUrl: './listings.component.html',
 })
 export class ListingsComponent {
-  homes: Home[] = mockData as Home[];
+  homes: any[] = [];
+  homeService = inject(ListingService);
+
+  async ngOnInit() {
+    this.homes = await this.homeService.getAllListings();
+  }
 
 }

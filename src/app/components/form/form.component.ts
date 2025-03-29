@@ -16,7 +16,7 @@ interface FormField {
   type: string;
   validators?: any[];
   icon?: string;
-  options?: Array<{ key: string; value: string }>;
+  options?: Array<{ label: string; value: string }>;
   placeholder?: string;
 }
 
@@ -64,7 +64,8 @@ export class FormComponent {
 
   onSubmit() {
     if (this.form.valid) {
-      this.formSubmit.emit(this.form.value);
+      const transformedValue = this.convertNumericValues(this.form.value);
+      this.formSubmit.emit(transformedValue);
     } else {
       this.form.markAllAsTouched();
     }
@@ -85,6 +86,17 @@ export class FormComponent {
   getFieldLabel(fieldName: string): string {
     const field = this.config.fields.find(f => f.name === fieldName);
     return field ? field.label : fieldName;
+  }
+
+  // Transform form values: convert number fields from string to number
+  private convertNumericValues(formValue: any): any {
+    const converted: any = { ...formValue };
+    this.config.fields.forEach(field => {
+      if (field.type === 'number' && converted[field.name] !== null && converted[field.name] !== undefined) {
+        converted[field.name] = Number(converted[field.name]);
+      }
+    });
+    return converted;
   }
 
   protected readonly String = String;

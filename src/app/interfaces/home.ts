@@ -1,5 +1,5 @@
 export interface Home {
-  $id: string;
+  $id?: string;
   userId: string;
   title: string;
   description: string;

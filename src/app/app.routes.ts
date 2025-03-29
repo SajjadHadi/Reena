@@ -5,7 +5,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ListingsComponent } from './pages/listings/listings.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
-import { ListingComponent } from './pages/listing/listing.component';
+import { ListingComponent } from './pages/listings/listing/listing.component';
 import { UserAddListingComponent } from './pages/user-dashboard/user-add-listing/user-add-listing.component';
 import { authGuard } from './gaurds/auth.guard';
 

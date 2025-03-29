@@ -1,7 +1,6 @@
 export default [
   {
     $id: '',
-    userId: '',
     zipCode: '',
     title: "Modern Family Home",
     description: "A perfect home for a modern family, situated in a quiet suburban neighborhood.",
@@ -18,7 +17,6 @@ export default [
   },
   {
     $id: '',
-    userId: '',
     zipCode: '',
     title: "Luxury Apartment",
     description: "A high-end luxury apartment located in the heart of the city.",
@@ -35,7 +33,6 @@ export default [
   },
   {
     $id: '',
-    userId: '',
     zipCode: '',
     title: "Beachfront Villa",
     description: "A stunning villa right on the beach, offering breathtaking ocean views.",
@@ -52,7 +49,6 @@ export default [
   },
   {
     $id: '',
-    userId: '',
     zipCode: '',
     title: "Urban Studio",
     description: "Compact and functional studio apartment for young professionals.",
@@ -69,7 +65,6 @@ export default [
   },
   {
     $id: '',
-    userId: '',
     zipCode: '',
     title: "Mountain Cabin",
     description: "Secluded mountain cabin with a cozy and serene atmosphere.",
@@ -86,7 +81,6 @@ export default [
   },
   {
     $id: '',
-    userId: '',
     zipCode: '',
     title: "Historic Townhouse",
     description: "A beautifully restored townhouse in a historic district.",
@@ -98,13 +92,11 @@ export default [
     features: ["Original Woodwork", "Balcony", "Walkable Neighborhood"],
     coverImage: "https://images.pexels.com/photos/2183521/pexels-photo-2183521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: ["historic-townhouse1.jpg", "historic-townhouse2.jpg"],
-
     city: "Savannah",
     country: "USA",
 
   }, {
     $id: '',
-    userId: '',
     zipCode: '',
     title: "Cozy Cottage",
     description: "A charming cottage in the countryside, perfect for a weekend retreat.",

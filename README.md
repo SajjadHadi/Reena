@@ -12,6 +12,18 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 ## Overview
 ![Reena Cover](public/assets/images/ReenaCover.png)
 
+### Key Features
+
+- **Angular Reactive Forms**: Utilizes reactive forms for dynamic input handling with built-in validation.
+- **Reusable Components**: Includes dynamic and reusable components like sections and forms.
+- **Router with Guards**: Implements Angular router with guards for protected routes.
+- **Event Emission**: Uses event emitters for inter-component communication.
+- **PrimeNG & Tailwind**: Combines PrimeNG components with Tailwind CSS for styling.
+- **Appwrite Backend**: Integrates Appwrite for backend services including authentication and database.
+- **Responsive Design**: Ensures the application is fully responsive across devices.
+- **NgRX State Management**: Manages state with NgRX stores and effects.
+- **Services & Initializers**: Employs services for logic and initializers for state setup.
+
 ### Pages Gallery
 ![Reena Cover](public/assets/images/ReenaLandingPage.png)
 ![Reena Cover](public/assets/images/ReenaSignUpPage.png)

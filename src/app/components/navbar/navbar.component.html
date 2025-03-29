@@ -14,8 +14,14 @@
     <ng-template #end>
       <div class="flex items-center gap-2">
         @if (isLoggedIn) {
-          <!--          PLACE HOLDER AVATAR           -->
-          <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle"/>
+          <p-menu #userMenu [model]="userMenuItems" [popup]="true"></p-menu>
+          <p-avatar
+            routerLink="/user-dashboard"
+            image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+            shape="circle"
+            class="cursor-pointer"
+            (mouseenter)="userMenu.toggle($event)"
+          />
         } @else {
           <p-button-group>
             <p-button label="Login" icon="pi pi-sign-in" routerLink="/login"/>

@@ -1,5 +1,8 @@
 export default [
   {
+    $id: '',
+    userId: '',
+    zipCode: '',
     title: "Modern Family Home",
     description: "A perfect home for a modern family, situated in a quiet suburban neighborhood.",
     price: 350000,
@@ -10,16 +13,13 @@ export default [
     features: ["Garage", "Backyard", "Solar Panels"],
     coverImage: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: ["modern-home1.jpg", "modern-home2.jpg", "modern-home3.jpg"],
-    location:
-      {
-        street: "123 Maple Street",
-        city: "Springfield",
-        state: "Illinois",
-        zipcode: "62704",
-        country: "USA",
-      },
+    city: "Springfield",
+    country: "USA",
   },
   {
+    $id: '',
+    userId: '',
+    zipCode: '',
     title: "Luxury Apartment",
     description: "A high-end luxury apartment located in the heart of the city.",
     price: 750000,
@@ -30,36 +30,13 @@ export default [
     features: ["Rooftop Pool", "Gym", "24/7 Security"],
     coverImage: "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: ["luxury-apartment1.jpg", "luxury-apartment2.jpg"],
-    location:
-      {
-        street: "45 Park Avenue",
-        city: "New York",
-        state: "New York",
-        zipcode: "10016",
-        country: "USA",
-      },
+    city: "New York",
+    country: "USA",
   },
   {
-    title: "Cozy Cottage",
-    description: "A charming cottage in the countryside, perfect for a weekend retreat.",
-    price: 120000,
-    status: "For-Sale",
-    bedrooms: 2,
-    bathrooms: 1,
-    squareMeters: 80,
-    features: ["Fireplace", "Garden", "Rustic Design"],
-    coverImage: "https://images.pexels.com/photos/453201/pexels-photo-453201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    images: ["cozy-cottage1.jpg", "cozy-cottage2.jpg"],
-    location:
-      {
-        street: "7 Willow Lane",
-        city: "Asheville",
-        state: "North Carolina",
-        zipcode: "28803",
-        country: "USA",
-      },
-  },
-  {
+    $id: '',
+    userId: '',
+    zipCode: '',
     title: "Beachfront Villa",
     description: "A stunning villa right on the beach, offering breathtaking ocean views.",
     price: 1250000,
@@ -70,16 +47,13 @@ export default [
     features: ["Private Beach", "Infinity Pool", "Terrace"],
     coverImage: "https://images.pexels.com/photos/259685/pexels-photo-259685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: ["beachfront-villa1.jpg", "beachfront-villa2.jpg"],
-    location:
-      {
-        street: "Ocean Drive",
-        city: "Miami",
-        state: "Florida",
-        zipcode: "33139",
-        country: "USA",
-      },
+    city: "Miami",
+    country: "USA",
   },
   {
+    $id: '',
+    userId: '',
+    zipCode: '',
     title: "Urban Studio",
     description: "Compact and functional studio apartment for young professionals.",
     price: 95000,
@@ -90,16 +64,13 @@ export default [
     features: ["High-Speed Internet", "City View"],
     coverImage: "https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: ["urban-studio1.jpg", "urban-studio2.jpg"],
-    location:
-      {
-        street: "22 High Street",
-        city: "Seattle",
-        state: "Washington",
-        zipcode: "98101",
-        country: "USA",
-      },
+    city: "Seattle",
+    country: "USA",
   },
   {
+    $id: '',
+    userId: '',
+    zipCode: '',
     title: "Mountain Cabin",
     description: "Secluded mountain cabin with a cozy and serene atmosphere.",
     price: 200000,
@@ -110,16 +81,13 @@ export default [
     features: ["Hiking Trails", "Wood Stove", "Deck"],
     coverImage: "https://images.pexels.com/photos/276593/pexels-photo-276593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: ["mountain-cabin1.jpg", "mountain-cabin2.jpg"],
-    location:
-      {
-        street: "12 Summit Road",
-        city: "Boulder",
-        state: "Colorado",
-        zipcode: "80302",
-        country: "USA",
-      },
+    city: "Boulder",
+    country: "USA",
   },
   {
+    $id: '',
+    userId: '',
+    zipCode: '',
     title: "Historic Townhouse",
     description: "A beautifully restored townhouse in a historic district.",
     price: 500000,
@@ -130,13 +98,26 @@ export default [
     features: ["Original Woodwork", "Balcony", "Walkable Neighborhood"],
     coverImage: "https://images.pexels.com/photos/2183521/pexels-photo-2183521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: ["historic-townhouse1.jpg", "historic-townhouse2.jpg"],
-    location:
-      {
-        street: "56 Old Town Road",
-        city: "Savannah",
-        state: "Georgia",
-        zipcode: "31401",
-        country: "USA",
-      },
+
+    city: "Savannah",
+    country: "USA",
+
+  }, {
+    $id: '',
+    userId: '',
+    zipCode: '',
+    title: "Cozy Cottage",
+    description: "A charming cottage in the countryside, perfect for a weekend retreat.",
+    price: 120000,
+    status: "For-Sale",
+    bedrooms: 2,
+    bathrooms: 1,
+    squareMeters: 80,
+    features: ["Fireplace", "Garden", "Rustic Design"],
+    coverImage: "https://images.pexels.com/photos/453201/pexels-photo-453201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    images: ["cozy-cottage1.jpg", "cozy-cottage2.jpg"],
+    city: "Asheville",
+    country: "USA",
   },
+
 ];

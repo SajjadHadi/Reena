@@ -19,6 +19,7 @@
     "@angular/router": "^19.2.0",
     "@ngrx/effects": "^19.0.1",
     "@ngrx/store": "^19.0.1",
+    "@ngrx/store-devtools": "^19.0.1",
     "@primeng/themes": "^19.0.10",
     "@tailwindcss/postcss": "^4.0.17",
     "appwrite": "^17.0.1",

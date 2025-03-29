@@ -9,7 +9,7 @@
   </div>
 
   <div class="font-medium">{{ item.title }}</div>
-  <small>{{ item.location.city }}, {{ item.location.state }}</small>
+  <small>{{ item.city }}, {{ item.country }}</small>
   <div class="flex justify-between items-center mt-4">
     <div class="mt-0 font-semibold text-xl">{{ '$' + item.price }}</div>
     <p-button [outlined]="true" icon="pi pi-arrow-right" iconPos="right" label="Know more" severity="secondary"

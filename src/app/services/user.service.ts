@@ -21,12 +21,14 @@ export class UserService {
 
   async signup(user: SignUp): Promise<Models.User<Models.Preferences>> {
     try {
-      return await this.account.create(
+      const newUser = await this.account.create(
         ID.unique(),
         user.email,
         user.password,
         user.fullName
       );
+      await this.account.createSession(user.email, user.password);
+      return newUser;
     } catch (error: any) {
       if (error.code === 409) {
         throw new Error('A user with this email already exists.');

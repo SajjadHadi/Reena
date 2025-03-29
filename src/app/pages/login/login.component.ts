@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormComponent } from '../../components/form/form.component';
 import { Validators } from '@angular/forms';
-import { Login } from '../../interfaces/forms';
+import { Login } from '../../interfaces/form';
+import { Store } from '@ngrx/store';
+import { UserActions } from '../../store/user/user.actions';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +14,8 @@ import { Login } from '../../interfaces/forms';
   templateUrl: './login.component.html',
 })
 export class LoginComponent {
-
+  router = inject(Router);
+  store = inject(Store);
   protected readonly Validators = Validators;
 
   loginConfig = {
@@ -37,6 +41,7 @@ export class LoginComponent {
   }
 
   onLogin(data: Login) {
-    console.log(data);
+    this.store.dispatch(UserActions.createSession({ data }));
+    this.router.navigate(['/user-dashboard']);
   }
 }

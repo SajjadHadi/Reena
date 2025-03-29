@@ -1,7 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { FormComponent } from '../../components/form/form.component';
 import { SignUp } from '../../interfaces/form';
+import { UserActions } from '../../store/user/user.actions';
+import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { selectUser } from '../../store/user/user.selectors';
 
 @Component({
   selector: 'app-sign-up',
@@ -11,6 +15,9 @@ import { SignUp } from '../../interfaces/form';
   templateUrl: './sign-up.component.html'
 })
 export class SignUpComponent {
+  store = inject(Store);
+  router = inject(Router);
+
   signUpConfig = {
     title: 'Sign up',
     description: "Enter your credentials to create a new account. If you've already created and account please go to the login page.",
@@ -46,7 +53,12 @@ export class SignUpComponent {
     submitLabel: 'Sign up'
   }
 
-  onSignUp(data: SignUp) {
-    console.log(data);
+  async onSignUp(user: SignUp) {
+    this.store.dispatch(UserActions.signUp({ user }));
+    this.store.select(selectUser).subscribe(u => {
+      if (u) {
+        this.router.navigate(['/user-dashboard']);
+      }
+    });
   }
 }

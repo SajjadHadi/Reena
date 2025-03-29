@@ -59,13 +59,8 @@ export class NavbarComponent {
 
     this.userMenuItems = [
       {
-        label: 'Profile',
-        icon: 'pi pi-user',
-        command: () => this.router.navigate(['/user-dashboard']),
-      },
-      {
         label: 'Add Listing',
-        icon: 'pi pi-cog',
+        icon: 'pi pi-plus',
         command: () => this.router.navigate(['/user-dashboard/add-listing']),
       },
       {

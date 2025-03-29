@@ -16,8 +16,7 @@
         @if (isLoggedIn) {
           <p-menu #userMenu [model]="userMenuItems" [popup]="true"></p-menu>
           <p-avatar
-            routerLink="/user-dashboard"
-            image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+            image="/assets/images/avatar.jpg"
             shape="circle"
             class="cursor-pointer"
             (mouseenter)="userMenu.toggle($event)"

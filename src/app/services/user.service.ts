@@ -4,7 +4,7 @@ import { account, databases } from '../../lib/appwrite';
 import { Login, SignUp } from '../interfaces/form';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
   private account: Account;
@@ -21,14 +21,9 @@ export class UserService {
 
   async signup(user: SignUp): Promise<Models.User<Models.Preferences>> {
     try {
-      const newUser = await this.account.create(
-        ID.unique(),
-        user.email,
-        user.password,
-        user.fullName
-      );
-      await this.account.createSession(user.email, user.password);
-      return newUser;
+      await this.account.create(ID.unique(), user.email, user.password, user.fullName);
+      await this.account.createEmailPasswordSession(user.email, user.password);
+      return await this.account.get();
     } catch (error: any) {
       if (error.code === 409) {
         throw new Error('A user with this email already exists.');

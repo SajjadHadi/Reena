@@ -11,9 +11,11 @@ import { provideEffects } from '@ngrx/effects';
 import { effects, reducers } from './store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { initializeApp } from './app.initializer';
+import {MessageService} from 'primeng/api'
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    MessageService,
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {

@@ -1,1 +1,62 @@
-<p>listing {{homeId}}</p>
+<div class="text-[var(--p-content-base)] p-4 md:p-8 flex flex-col mb-10">
+  <div *ngIf="loading" class="flex items-center justify-center h-full">
+    <p-progressSpinner></p-progressSpinner>
+  </div>
+
+  <div *ngIf="error" class="flex items-center justify-center h-full">
+    <p-message severity="error" [text]="error"></p-message>
+  </div>
+
+  <div *ngIf="home && !loading && !error" class="">
+    <p-card styleClass="max-w-5xl mx-auto bg-[var(--p-surface-100)]" >
+      <ng-template pTemplate="header">
+        <div class="flex justify-between items-center p-4">
+          <h1 class="text-2xl md:text-3xl font-bold text-[var(--p-content-base)]">{{ home.title }}</h1>
+          <p-chip [label]="home.status" [styleClass]="home.status === 'For-Sale' ? 'p-chip-success' : 'p-chip-danger'"></p-chip>
+        </div>
+      </ng-template>
+
+      <p-image [src]="home.coverImage" alt="Image" width="512" imageClass="mb-10 rounded-md" />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div>
+          <h2 class="text-xl font-semibold text-[var(--p-content-base)] mb-2">Description</h2>
+          <p class="text-[var(--p-content-base)] mb-4">{{ home.description }}</p>
+
+          <h2 class="text-xl font-semibold text-[var(--p-content-base)] mb-2">Features</h2>
+          <div class="flex flex-wrap gap-2">
+            <p-chip *ngFor="let feature of home.features" [label]="feature" styleClass="p-chip-info"></p-chip>
+            <span *ngIf="!home.features || home.features.length === 0" class="text-[var(--p-content-muted)]">No features listed</span>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-[var(--p-content-base)] mb-2">Details</h2>
+          <ul class="space-y-2 text-[var(--p-content-base)]">
+            <li><strong>Price:</strong> ${{ home.price.toLocaleString() }}</li>
+            <li><strong>Bedrooms:</strong> {{ home.bedrooms }}</li>
+            <li><strong>Bathrooms:</strong> {{ home.bathrooms }}</li>
+            <li><strong>Size:</strong> {{ home.squareMeters }} m²</li>
+            <li><strong>Location:</strong> {{ home.city }}, {{ home.country }} {{ home.zipcode ? ' (' + home.zipcode + ')' : '' }}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex gap-4">
+        <p-button
+          label="Contact Agent"
+          styleClass="p-button-primary"
+          icon="pi pi-envelope"
+          [disabled]="home.status === 'Sold'"
+        ></p-button>
+        <p-button
+          label="Save Listing"
+          styleClass="p-button-secondary"
+          icon="pi pi-heart"
+        ></p-button>
+      </div>
+    </p-card>
+  </div>
+</div>
+
+<app-footer></app-footer>

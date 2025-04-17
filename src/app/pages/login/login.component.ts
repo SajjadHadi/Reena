@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { FormComponent } from '../../components/form/form.component';
 import { Validators } from '@angular/forms';
-import { Login } from '../../interfaces/form';
-import { Store } from '@ngrx/store';
-import { UserActions } from '../../store/user/user.actions';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { FormComponent } from '../../components/form/form.component';
+import { Login } from '../../interfaces/form';
+import { UserActions } from '../../store/user/user.actions';
 
 @Component({
   selector: 'app-login',

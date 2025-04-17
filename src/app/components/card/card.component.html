@@ -1,24 +1,26 @@
-<div class="border border-slate-100 rounded-lg m-2 p-4">
+<div class="border border-slate-100 rounded-lg m-2 p-4 min-h-[350px] flex flex-col justify-between">
   <div class="mb-4">
     <div class="relative mx-auto">
-      <p-image [alt]="item.title" imageClass="w-full rounded-xl"
+      <p-image [alt]="item.title" imageClass="w-full max-h-[200px] rounded-xl"
                src="{{ item.coverImage }}"/>
       <p-tag [value]="item.status" class="absolute"
              styleClass="bg-primary-400 text-secondary-400 left-2 top-2"/>
     </div>
   </div>
 
-  <div class="font-medium">{{ item.title }}</div>
-  <small>{{ item.city }}, {{ item.country }}</small>
-  <div class="flex justify-between items-center mt-4">
-    <div class="mt-0 font-semibold text-xl">{{ '$' + item.price }}</div>
-    <p-button
-      [routerLink]="'/listings/' + item.$id"
-      [outlined]="true"
-      icon="pi pi-arrow-right"
-      iconPos="right"
-      label="Know more"
-      severity="secondary"
-      size="small"/>
+  <div>
+    <div class="font-medium">{{ item.title }}</div>
+    <small>{{ item.city }}, {{ item.country }}</small>
+    <div class="flex justify-between items-center mt-4">
+      <div class="mt-0 font-semibold text-xl">{{ '$' + item.price }}</div>
+      <p-button
+        [routerLink]="'/listings/' + item.$id"
+        [outlined]="true"
+        icon="pi pi-arrow-right"
+        iconPos="right"
+        label="Know more"
+        severity="secondary"
+        size="small"/>
+    </div>
   </div>
 </div>
